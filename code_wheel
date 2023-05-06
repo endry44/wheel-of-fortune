@@ -1,0 +1,17 @@
+class WheelOfFortune {
+  constructor(signals) {
+    this.signals = signals;
+  }
+
+  spin() {
+    const randomIndex = Math.floor(Math.random() * this.signals.length);
+    return this.signals[randomIndex];
+  }
+}
+
+// Example usage
+const signals = ['Signal 1', 'Signal 2', 'Signal 3', 'Signal 4', 'Signal 5'];
+const wheel = new WheelOfFortune(signals);
+const spunSignal = wheel.spin();
+console.log(`Spun signal: ${spunSignal}`);
+
